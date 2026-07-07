@@ -1,47 +1,37 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>UMS Clone (Single File)</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Special Courses</title>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 <style>
-*{margin:0;padding:0;box-sizing:border-box}
-body{font-family:Poppins,sans-serif;background:#f5f7fb;color:#222}
+*{margin:0;padding:0;box-sizing:border-box}body{font-family:Poppins,sans-serif;background:#f5f7fb}
 .top-banner{background:#ff5f57;color:#fff;height:42px;display:flex;align-items:center;justify-content:center}
-header{display:flex;justify-content:space-between;align-items:center;background:#fff;padding:18px 45px;box-shadow:0 2px 10px rgba(0,0,0,.05)}
+header{display:flex;justify-content:space-between;align-items:center;background:#fff;padding:18px 40px}
 .logo h2{font-size:40px}.logo span{font-size:12px;color:#666}
-.header-right{display:flex;align-items:center;gap:20px}
-.search-box,.course-search{display:flex;align-items:center;gap:10px;background:#f3f3f3;padding:12px 18px;border-radius:30px}
-.search-box input,.course-search input{border:none;background:transparent;outline:none}
-.notification{position:relative}.notification span{position:absolute;top:-8px;right:-8px;background:#ff7043;color:#fff;border-radius:50%;width:18px;height:18px;font-size:10px;display:flex;align-items:center;justify-content:center}
-.profile{display:flex;align-items:center;gap:10px}.profile img{width:46px;height:46px;border-radius:50%}
-nav{display:flex;justify-content:space-between;background:#fff;padding:18px 45px}
-nav ul{display:flex;list-style:none;gap:30px}
+.header-right{display:flex;gap:18px;align-items:center}
+.search-box,.course-search{display:flex;align-items:center;gap:8px;background:#f3f3f3;padding:10px 16px;border-radius:30px}
+input{border:none;background:transparent;outline:none}
+.profile{display:flex;gap:10px;align-items:center}.profile img{width:45px;height:45px;border-radius:50%}
+nav{display:flex;justify-content:space-between;background:#fff;padding:16px 40px}
+nav ul{display:flex;gap:28px;list-style:none}
 .container{width:90%;margin:30px auto}
-.subnav{display:flex;flex-wrap:wrap;gap:12px;background:#fff;padding:20px;border-radius:18px}
-.subnav button{padding:10px 22px;border-radius:25px;border:2px solid #ff7d57;background:#fff}
-.subnav .active{background:#ff7d57;color:#fff}
+.hero img{width:100%;border-radius:18px;display:block;margin-bottom:25px}
+.subnav{display:flex;gap:10px;flex-wrap:wrap;background:#fff;padding:20px;border-radius:18px}
+.subnav button{padding:10px 18px;border-radius:25px;border:2px solid #ff7f59;background:#fff}
+.active{background:#ff7f59!important;color:#fff}
 .last-date{margin-left:auto;background:#f3f3f3;padding:10px 18px;border-radius:25px}
-.registered{background:#ff7d57;color:#fff;padding:10px 18px;border-radius:25px}
-section{background:#fff;margin-top:25px;padding:30px;border-radius:20px}
-.section-title{font-size:24px;font-weight:600;margin-bottom:25px}
-.cards{display:flex;flex-wrap:wrap;gap:24px}
-.course-card{width:320px;border:2px solid #ff9a7a;border-radius:20px;padding:24px;transition:.3s}
-.course-card:hover{transform:translateY(-6px)}
-.tag{display:inline-block;background:#ff8b66;color:#fff;padding:6px 14px;border-radius:20px;margin-bottom:18px}
-.mode button,.danger{margin-top:12px;padding:10px 16px;border-radius:20px;background:#fff}
-.modeB{margin-top:10px;display:inline-block;background:#ff8b66;color:#fff;padding:10px 16px;border-radius:20px}
-.bottom{display:flex;justify-content:space-between;align-items:center;margin-top:24px}
-.bottom h3{color:#ff7043}
-.danger{border:2px solid #ffc7b5;color:#ff7043}
-.empty{background:#dff7ff;padding:15px;border-radius:12px}
-.floating{position:fixed;left:50%;bottom:25px;transform:translateX(-50%);background:#ff8b66;color:#fff;padding:15px 24px;border-radius:40px;display:flex;gap:15px;align-items:center;cursor:pointer}
-.books{background:#fff;color:#ff8b66;width:50px;height:50px;border-radius:50%;display:flex;align-items:center;justify-content:center}
-.float-icons{position:fixed;right:25px;bottom:25px;display:flex;flex-direction:column;gap:12px}
-.float-icons div{width:55px;height:55px;background:#ff8b66;color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center}
+.registered{background:#ff7f59;color:#fff;padding:10px 18px;border-radius:25px}
+section{background:#fff;margin-top:25px;padding:28px;border-radius:18px}
+.cards{display:flex;gap:24px;flex-wrap:wrap}
+.course-card{width:320px;border:2px solid #ff9c7b;border-radius:18px;padding:22px}
+.tag{display:inline-block;background:#ff8b66;color:#fff;padding:6px 14px;border-radius:18px;margin-bottom:16px}
+.modeB{display:inline-block;background:#ff8b66;color:#fff;padding:9px 14px;border-radius:18px;margin-top:10px}
+.bottom{display:flex;justify-content:space-between;align-items:center;margin-top:20px}
+.danger{padding:10px 14px;border-radius:18px;border:2px solid #ffc7b5;background:#fff;color:#ff7043}
+.empty{padding:14px;background:#dff7ff;border-radius:12px}
 </style>
 </head>
 <body>
@@ -50,43 +40,61 @@ section{background:#fff;margin-top:25px;padding:30px;border-radius:20px}
 <div class="logo"><h2>UMS</h2><span>University Management System</span></div>
 <div class="header-right">
 <div class="search-box"><i class="fa fa-search"></i><input placeholder="Search"></div>
-<div class="notification"><i class="fa-regular fa-bell"></i><span>27</span></div>
-<div class="profile"><img src="https://i.pravatar.cc/80"><strong>Ritesh Yadav</strong></div>
+<div class="profile"><img src="https://i.pravatar.cc/80"><b>Ritesh Yadav</b></div>
 </div>
 </header>
-<nav>
-<ul><li>Academics</li><li>Administrative</li><li>Important Links</li><li>Student Services</li></ul>
-<div>Old UMS</div>
-</nav>
+<nav><ul><li>Academics</li><li>Administrative</li><li>Important Links</li><li>Student Services</li></ul><div>Old UMS</div></nav>
+
 <div class="container">
-<h1>Exam Registration</h1>
+<section class="hero">
+<img src="https://placehold.co/1600x500/e8eef8/666?text=Hero+Banner+Placeholder" alt="Hero Banner Placeholder">
+</section>
+
+<h1>Special Courses</h1>
+
 <div class="subnav">
-<button class="active">Re-Appear</button>
+<button class="active">Special Courses</button>
 <button>Improvement</button>
 <button>Result Awaited</button>
 <div class="last-date">Last Date: <b>08 Jul 2026</b></div>
 <div class="registered">2 / 15 Registered</div>
 <div class="course-search"><i class="fa fa-search"></i><input id="search" placeholder="Search courses"></div>
 </div>
+
 <section>
-<div class="section-title">Theory Courses</div>
-<div class="cards" id="cards">
-<div class="course-card"><div class="tag">Theory</div><h2>ECOM531 :: MANAGERIAL ECONOMICS-I</h2><div class="mode"><button>Mode A</button></div><div class="modeB">Mode B (with CA)</div><div class="bottom"><div><small>Fee</small><h3>₹3000</h3></div><button class="danger">De-Register</button></div></div>
-<div class="course-card"><div class="tag">Theory</div><h2>PEAM518 :: ANALYTICAL SKILLS-II</h2><div class="mode"><button>Mode A</button></div><div class="modeB">Mode B (with CA)</div><div class="bottom"><div><small>Fee</small><h3>₹3000</h3></div><button class="danger">De-Register</button></div></div>
+<h2>Special Courses</h2><br>
+<div class="cards">
+<div class="course-card">
+<div class="tag">Theory</div>
+<h3>ECOM531 :: MANAGERIAL ECONOMICS-I</h3><br>
+<button>Mode A</button><br>
+<div class="modeB">Mode B (with CA)</div>
+<div class="bottom"><div><small>Fee</small><h2>₹4500</h2></div><button class="danger">De-Register</button></div>
+</div>
+
+<div class="course-card">
+<div class="tag">Theory</div>
+<h3>PEAM518 :: ANALYTICAL SKILLS-II</h3><br>
+<button>Mode A</button><br>
+<div class="modeB">Mode B (with CA)</div>
+<div class="bottom"><div><small>Fee</small><h2>₹4500</h2></div><button class="danger">De-Register</button></div>
+</div>
 </div>
 </section>
-<section><div class="section-title">Practical Courses</div><div class="empty">No practical courses found matching your search.</div></section>
+
+<section>
+<h2>Practical Courses</h2><br>
+<div class="empty">No practical courses found matching your search.</div>
+</section>
 </div>
-<div class="floating"><div class="books"><i class="fa fa-book-open"></i></div><div><b>View Course</b><br><small>2 Courses</small></div></div>
-<div class="float-icons"><div><i class="fa fa-bug"></i></div><div><i class="fa fa-gear"></i></div></div>
+
 <script>
-document.getElementById('search').addEventListener('input',e=>{
+document.getElementById("search").addEventListener("input",e=>{
 const q=e.target.value.toLowerCase();
-document.querySelectorAll('.course-card').forEach(c=>{
-c.style.display=c.innerText.toLowerCase().includes(q)?'block':'none';
+document.querySelectorAll(".course-card").forEach(c=>{
+c.style.display=c.innerText.toLowerCase().includes(q)?"block":"none";
 });
 });
-document.querySelectorAll('.danger').forEach(b=>b.onclick=()=>b.closest('.course-card').remove());
 </script>
 </body>
 </html>
